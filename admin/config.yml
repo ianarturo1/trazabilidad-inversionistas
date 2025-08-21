@@ -1,0 +1,91 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+publish_mode: editorial_workflow
+
+locale: "es"
+
+collections:
+  - name: "manifest"
+    label: "Manifest (lista de inversionistas)"
+    files:
+      - label: "Tenants (lista)"
+        name: "tenants"
+        file: "data/manifest.json"
+        format: "json"
+        fields:
+          - {label: "Inversionista por defecto", name: "defaultTenant", widget: "string", hint: "Slug del inversionista por defecto"}
+          - label: "Lista de inversionistas (slugs)"
+            name: "tenants"
+            widget: "list"
+            allow_add: true
+            field: {label: "Slug", name: "slug", widget: "string"}
+
+  - name: "tenants"
+    label: "Inversionistas (detalles)"
+    folder: "data/tenants"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    identifier_field: "slug"
+    fields:
+      - {label: "Slug (minúsculas, sin espacios)", name: "slug", widget: "string", pattern: ["^[a-z0-9-]+$", "Usa minúsculas, números y guiones."]}
+      - {label: "Nombre visible", name: "name", widget: "string"}
+      - {label: "Logo", name: "logo", widget: "image", required: false}
+      - label: "Especificaciones de panel"
+        name: "panel_specs"
+        widget: "object"
+        collapsed: true
+        fields:
+          - {label: "Watt por panel", name: "watt_per_panel", widget: "number", value_type: "int", default: 550, min: 100, step: 10}
+      - label: "Proyectos (principales)"
+        name: "projects"
+        widget: "list"
+        collapsed: true
+        summary: "{{fields.name}} • {{fields.location}}"
+        fields:
+          - {label: "ID", name: "id", widget: "string"}
+          - {label: "Nombre", name: "name", widget: "string"}
+          - {label: "Ubicación (texto)", name: "location", widget: "string"}
+          - label: "Coordenadas"
+            name: "coordinates"
+            widget: "object"
+            fields:
+              - {label: "Latitud", name: "lat", widget: "number", value_type: "float"}
+              - {label: "Longitud", name: "lng", widget: "number", value_type: "float"}
+          - {label: "Tamaño (kWp)", name: "size_kwp", widget: "number", value_type: "float"}
+          - {label: "Sitio asegurado (YYYY-MM-DD)", name: "site_secured_date", widget: "string", required: false}
+          - {label: "PPA asegurado (YYYY-MM-DD)", name: "ppa_secured_date", widget: "string", required: false}
+          - {label: "Inicio instalación (YYYY-MM-DD)", name: "installation_start_date", widget: "string", required: false}
+          - {label: "Duración instalación (días)", name: "installation_duration_days", widget: "number", value_type: "int", required: false}
+          - {label: "Fe de hechos (YYYY-MM-DD)", name: "installation_proof_date", widget: "string", required: false}
+          - {label: "Interconexión (YYYY-MM-DD)", name: "interconnection_finish_date", widget: "string", required: false}
+          - {label: "Notas", name: "notes", widget: "text", required: false}
+      - label: "Sociality (3%)"
+        name: "sociality"
+        widget: "list"
+        collapsed: true
+        summary: "{{fields.name}} • {{fields.location}}"
+        fields:
+          - {label: "ID", name: "id", widget: "string"}
+          - {label: "Nombre", name: "name", widget: "string"}
+          - {label: "Ubicación (texto)", name: "location", widget: "string"}
+          - label: "Coordenadas"
+            name: "coordinates"
+            widget: "object"
+            fields:
+              - {label: "Latitud", name: "lat", widget: "number", value_type: "float"}
+              - {label: "Longitud", name: "lng", widget: "number", value_type: "float"}
+          - {label: "Tamaño (kWp)", name: "size_kwp", widget: "number", value_type: "float"}
+          - {label: "Sitio asegurado (YYYY-MM-DD)", name: "site_secured_date", widget: "string", required: false}
+          - {label: "PPA asegurado (YYYY-MM-DD)", name: "ppa_secured_date", widget: "string", required: false}
+          - {label: "Inicio instalación (YYYY-MM-DD)", name: "installation_start_date", widget: "string", required: false}
+          - {label: "Duración instalación (días)", name: "installation_duration_days", widget: "number", value_type: "int", required: false}
+          - {label: "Fe de hechos (YYYY-MM-DD)", name: "installation_proof_date", widget: "string", required: false}
+          - {label: "Interconexión (YYYY-MM-DD)", name: "interconnection_finish_date", widget: "string", required: false}
+          - {label: "Notas", name: "notes", widget: "text", required: false}

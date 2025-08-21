@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Finsolar • Investor Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Raleway:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <img src="assets/finsolar_logo.svg" alt="Finsolar" class="logo" />
+      <h1>Investor Dashboard</h1>
+    </div>
+    <div class="actions">
+      <label for="tenantSelect" class="sr-only">Inversionista</label>
+      <select id="tenantSelect" class="select"></select>
+      <button id="btnPrint" class="btn btn-secondary" title="Imprimir o guardar PDF">Imprimir/PDF</button>
+      <button id="btnCopyLink" class="btn btn-secondary" title="Copiar URL con inversionista">Copiar enlace</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="tenant-hero">
+      <div class="tenant-info">
+        <img id="tenantLogo" class="tenant-logo" src="assets/finsolar_logo.svg" alt="Logo inversionista">
+        <div>
+          <h2 id="tenantName">—</h2>
+          <p id="tenantSubtitle">Visibilidad del estado de proyectos solares (tax‑equity)</p>
+        </div>
+      </div>
+      <div class="kpis" id="kpis">
+        <!-- KPIs renderizados por JS -->
+      </div>
+    </section>
+
+    <section class="map-section">
+      <h3>Mapa de proyectos</h3>
+      <div id="map" class="map"></div>
+    </section>
+
+    <section class="projects-section">
+      <h3>Proyectos principales</h3>
+      <div id="projectsContainer" class="cards"></div>
+    </section>
+
+    <section class="sociality-section">
+      <h3>Sociality (3% en causas sociales)</h3>
+      <div id="socialityContainer" class="cards"></div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <small>© <span id="year"></span> Finsolar. Dashboard estático. Datos de referencia.</small>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
