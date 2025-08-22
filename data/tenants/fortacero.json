@@ -57,14 +57,20 @@
       "ppa_secured_date": "2025-08-27"
     },
     {
-      "location": "Puerto Aventuras, Quintana Roo",
-      "id": "MX-QROO-004",
+      "size_kwp": 327,
       "name": "Súper Akí",
+      "installation_proof_date": "2025-11-17",
+      "installation_start_date": "2025-10-03",
+      "location": "Puerto Aventuras, Quintana Roo",
+      "interconnection_finish_date": "2026-03-16",
+      "site_secured_date": "2025-08-29",
+      "id": "MX-QROO-004",
       "coordinates": {
         "lng": -87.22478620514437,
         "lat": 20.510786324685373
       },
-      "size_kwp": 327
+      "installation_duration_days": 30,
+      "ppa_secured_date": "2025-09-05"
     }
   ],
   "sociality": [
