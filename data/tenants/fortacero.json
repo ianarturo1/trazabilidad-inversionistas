@@ -43,6 +43,7 @@
     {
       "size_kwp": 1332,
       "name": "CELOPLAYA",
+      "installation_proof_date": "2026-01-05",
       "installation_start_date": "2025-09-19",
       "location": "Playa del Carmen, Quintana Roo",
       "interconnection_finish_date": "2026-04-18",
@@ -54,6 +55,16 @@
       },
       "installation_duration_days": 90,
       "ppa_secured_date": "2025-08-27"
+    },
+    {
+      "location": "Puerto Aventuras, Quintana Roo",
+      "id": "MX-QROO-004",
+      "name": "Súper Akí",
+      "coordinates": {
+        "lng": -87.22478620514437,
+        "lat": 20.510786324685373
+      },
+      "size_kwp": 327
     }
   ],
   "sociality": [
