@@ -51,7 +51,9 @@
   }
 
   function sumCapacity(arr){
-    return arr.reduce((acc, p) => acc + (Number(p.size_kwp||0)), 0);
+    // Guardar contra valores nulos o indefinidos para evitar errores de ejecución
+    // cuando no existan proyectos o la propiedad aún no esté definida.
+    return (arr || []).reduce((acc, p) => acc + (Number(p.size_kwp||0)), 0);
   }
 
   function estimatePanels(size_kwp, watt_per_panel){
