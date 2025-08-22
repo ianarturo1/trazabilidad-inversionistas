@@ -7,57 +7,72 @@
   },
   "projects": [
     {
-      "id": "MX-NL-001",
+      "notes": "Estructuras listas; llegada de inversores semana 2.",
+      "size_kwp": 2500,
       "name": "Parque Solar Apodaca A",
+      "installation_proof_date": null,
+      "installation_start_date": "2025-08-25",
       "location": "Apodaca, Nuevo León, MX",
+      "interconnection_finish_date": null,
+      "site_secured_date": "2025-07-15",
+      "id": "MX-NL-001",
       "coordinates": {
         "lat": 25.7785,
         "lng": -100.1884
       },
-      "size_kwp": 2500,
-      "site_secured_date": "2025-07-15",
-      "ppa_secured_date": "2025-08-01",
-      "installation_start_date": "2025-08-25",
       "installation_duration_days": 60,
-      "installation_proof_date": null,
-      "interconnection_finish_date": null,
-      "notes": "Estructuras listas; llegada de inversores semana 2."
+      "ppa_secured_date": "2025-08-01"
     },
     {
-      "id": "MX-COAH-002",
+      "notes": "PPA en negociación con offtaker AAA.",
+      "size_kwp": 3200,
       "name": "Granjas Saltillo Norte",
+      "installation_proof_date": null,
+      "installation_start_date": null,
       "location": "Saltillo, Coahuila, MX",
+      "interconnection_finish_date": null,
+      "site_secured_date": "2025-08-10",
+      "id": "MX-COAH-002",
       "coordinates": {
         "lat": 25.4383,
         "lng": -100.9733
       },
-      "size_kwp": 3200,
-      "site_secured_date": "2025-08-10",
-      "ppa_secured_date": null,
-      "installation_start_date": null,
       "installation_duration_days": 45,
-      "installation_proof_date": null,
-      "interconnection_finish_date": null,
-      "notes": "PPA en negociación con offtaker AAA."
+      "ppa_secured_date": null
+    },
+    {
+      "size_kwp": 1332,
+      "name": "CELOPLAYA",
+      "installation_start_date": "2025-09-19",
+      "location": "Playa del Carmen, Quintana Roo",
+      "interconnection_finish_date": "2026-04-18",
+      "site_secured_date": "2025-08-20",
+      "id": "MX-QROO-003",
+      "coordinates": {
+        "lat": 20.674761493750115,
+        "lng": -87.11161266471379
+      },
+      "installation_duration_days": 90,
+      "ppa_secured_date": "2025-08-27"
     }
   ],
   "sociality": [
     {
-      "id": "SOC-MX-NL-01",
+      "notes": "Proyecto Sociality (3%).",
+      "size_kwp": 120,
       "name": "Escuela Técnica Apodaca",
+      "installation_proof_date": null,
+      "installation_start_date": "2025-08-28",
       "location": "Apodaca, Nuevo León, MX",
+      "interconnection_finish_date": null,
+      "site_secured_date": "2025-08-05",
+      "id": "SOC-MX-NL-01",
       "coordinates": {
         "lat": 25.7802,
         "lng": -100.1842
       },
-      "size_kwp": 120,
-      "site_secured_date": "2025-08-05",
-      "ppa_secured_date": "2025-08-12",
-      "installation_start_date": "2025-08-28",
       "installation_duration_days": 20,
-      "installation_proof_date": null,
-      "interconnection_finish_date": null,
-      "notes": "Proyecto Sociality (3%)."
+      "ppa_secured_date": "2025-08-12"
     }
   ]
 }
