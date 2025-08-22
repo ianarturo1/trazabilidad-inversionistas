@@ -7,40 +7,6 @@
   },
   "projects": [
     {
-      "notes": "Estructuras listas; llegada de inversores semana 2.",
-      "size_kwp": 2500,
-      "name": "Parque Solar Apodaca A",
-      "installation_proof_date": null,
-      "installation_start_date": "2025-08-25",
-      "location": "Apodaca, Nuevo León, MX",
-      "interconnection_finish_date": null,
-      "site_secured_date": "2025-07-15",
-      "id": "MX-NL-001",
-      "coordinates": {
-        "lat": 25.7785,
-        "lng": -100.1884
-      },
-      "installation_duration_days": 60,
-      "ppa_secured_date": "2025-08-01"
-    },
-    {
-      "notes": "PPA en negociación con offtaker AAA.",
-      "size_kwp": 3200,
-      "name": "Granjas Saltillo Norte",
-      "installation_proof_date": null,
-      "installation_start_date": null,
-      "location": "Saltillo, Coahuila, MX",
-      "interconnection_finish_date": null,
-      "site_secured_date": "2025-08-10",
-      "id": "MX-COAH-002",
-      "coordinates": {
-        "lat": 25.4383,
-        "lng": -100.9733
-      },
-      "installation_duration_days": 45,
-      "ppa_secured_date": null
-    },
-    {
       "size_kwp": 1332,
       "name": "CELOPLAYA",
       "installation_proof_date": "2026-01-05",
