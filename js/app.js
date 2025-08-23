@@ -94,8 +94,16 @@
   function computePortfolioProgress(tenant){
     const arr = [...(tenant.projects||[]), ...(tenant.sociality||[])];
     if(arr.length===0) return 0;
-    const avg = arr.reduce((a,p)=>a+computeStepScore(p),0) / arr.length;
-    return Math.round(avg);
+    const totalCap = sumCapacity(arr);
+    if(totalCap<=0){
+      const avg = arr.reduce((a,p)=>a+computeStepScore(p),0) / arr.length;
+      return Math.round(avg);
+    }
+    const weighted = arr.reduce((acc,p)=>{
+      const cap = Number(p.size_kwp) || 0;
+      return acc + computeStepScore(p) * cap;
+    },0) / totalCap;
+    return Math.round(weighted);
   }
 
   function initMap(){
