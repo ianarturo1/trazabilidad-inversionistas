@@ -4,7 +4,7 @@ Este paquete es un **sitio estático** listo para publicarse en Netlify y admini
 
 ## Estructura
 - `index.html` — Dashboard (mapa, KPIs, tarjetas de proyectos y Sociality)
-- `data/manifest.json` — Lista de inversionistas (slugs) y `defaultTenant`
+- `data/manifest.json` — Slug del inversionista (`defaultTenant`)
 - `data/tenants/<slug>.json` — Datos de cada inversionista (proyectos, sociality, paneles)
 - `admin/` — Panel CMS (requiere conectar con GitHub y habilitar Identity + Git Gateway)
 - `assets/` — Estilos, logos, uploads
@@ -15,8 +15,8 @@ Este paquete es un **sitio estático** listo para publicarse en Netlify y admini
 2) En Netlify activa **Identity** y **Git Gateway** (`Site Settings` → Identity → Enable; y `Identity` → `Git Gateway` → `Enable`).
 3) Entra a `/admin` (por ejemplo `https://tu-sitio.netlify.app/admin`), inicia sesión y edita:
    - **Inversionistas (detalles)**: crea/edita archivos en `data/tenants`.
-   - **Manifest**: agrega el *slug* a la lista `tenants` y define el `defaultTenant`.
-4) Abre `/<slug>/` (por ejemplo `/fortacero/`) para ver un inversionista específico; cada slug tiene su propia vista exclusiva.
+   - **Manifest**: define el `defaultTenant` (slug único del inversionista).
+4) Abre `/<slug>/` (por ejemplo `/fortacero/`) para ver la vista exclusiva del inversionista; el slug se fuerza automáticamente y no permite cambiar a otros.
 
 > Si no deseas CMS, puedes editar los JSON a mano y subirlos (drag & drop) o por GitHub.
 

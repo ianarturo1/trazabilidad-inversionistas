@@ -1,6 +1,3 @@
 {
-  "defaultTenant": "fortacero",
-  "tenants": [
-    "fortacero"
-  ]
+  "defaultTenant": "fortacero"
 }
