@@ -188,8 +188,8 @@
 
   function updateUrl(slug){
     const url = new URL(window.location.href);
-    url.searchParams.set("tenant", slug);
-    if(!url.pathname.includes(`/${slug}`)){
+    url.search = ""; // quitar query params para no exponer otros slugs
+    if(!url.pathname.endsWith(`/${slug}/`)){
       url.pathname = `/${slug}/`;
     }
     history.replaceState(null, "", url.toString());

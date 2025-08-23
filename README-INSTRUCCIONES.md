@@ -18,4 +18,6 @@ Este paquete es un **sitio estático** listo para publicarse en Netlify y admini
    - **Manifest**: agrega el *slug* a la lista `tenants` y define el `defaultTenant`.
 4) Abre `/<slug>/` (por ejemplo `/fortacero/`) para ver un inversionista específico; cada slug tiene su propia vista exclusiva.
 
+> Netlify redirige cualquier ruta al `index.html` para que las URLs con slug funcionen sin necesidad de archivos físicos por carpeta.
+
 > Si no deseas CMS, puedes editar los JSON a mano y subirlos (drag & drop) o por GitHub.
