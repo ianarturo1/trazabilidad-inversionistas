@@ -206,9 +206,9 @@
     initMap();
     let manifest;
     try{
-      manifest = await loadJSON("data/manifest.json");
+      manifest = await loadJSON("/data/manifest.json");
     }catch(e){
-      alert("No se pudo cargar el manifest. Verifica data/manifest.json");
+      alert("No se pudo cargar el manifest. Verifica /data/manifest.json");
       console.error(e);
       return;
     }
@@ -221,7 +221,7 @@
 
   async function loadTenant(slug){
     updateUrl(slug);
-    const path = `data/tenants/${slug}.json`;
+    const path = `/data/tenants/${slug}.json`;
     let tenant;
     try{
       tenant = await loadJSON(path);
