@@ -78,24 +78,34 @@
     `;
   }
 
+  function isPast(date){
+    const d = parseDate(date);
+    return !!(d && d <= new Date());
+  }
+
   function computeStepScore(project){
-    // 5 pasos: sitio, PPA, inicio instalación, fe de hechos, interconexión
-    const steps = [
-      project.site_secured_date,
-      project.ppa_secured_date,
-      project.installation_start_date,
-      project.installation_proof_date,
-      project.interconnection_finish_date
-    ];
-    const done = steps.filter(Boolean).length;
-    return Math.round((done/steps.length)*100);
+    // 4 pasos: sitio, PPA, inicio instalación, interconexión (fe de hechos no cuenta)
+    let score = 0;
+    if(isPast(project.site_secured_date)) score = 25;
+    if(isPast(project.ppa_secured_date)) score = 50;
+    if(isPast(project.installation_start_date)) score = 75;
+    if(isPast(project.interconnection_finish_date)) score = 100;
+    return score;
   }
 
   function computePortfolioProgress(tenant){
     const arr = [...(tenant.projects||[]), ...(tenant.sociality||[])];
     if(arr.length===0) return 0;
-    const avg = arr.reduce((a,p)=>a+computeStepScore(p),0) / arr.length;
-    return Math.round(avg);
+    const totalCap = sumCapacity(arr);
+    if(totalCap<=0){
+      const avg = arr.reduce((a,p)=>a+computeStepScore(p),0) / arr.length;
+      return Math.round(avg);
+    }
+    const weighted = arr.reduce((acc,p)=>{
+      const cap = Number(p.size_kwp) || 0;
+      return acc + computeStepScore(p) * cap;
+    },0) / totalCap;
+    return Math.round(weighted);
   }
 
   function initMap(){
