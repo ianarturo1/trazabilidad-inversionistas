@@ -7,8 +7,6 @@
   const todayYear = new Date().getFullYear();
   $("#year").textContent = String(todayYear);
 
-  const getParam = (k) => new URLSearchParams(window.location.search).get(k);
-
   const DEFAULT_CENTER = [23.6345, -102.5528]; // México
   let map, markers = [];
 
@@ -16,17 +14,6 @@
     const res = await fetch(path, {cache: 'no-store'});
     if(!res.ok) throw new Error(`No se pudo cargar ${path}`);
     return res.json();
-  }
-
-  function setSelectOptions(tenants, current){
-    const sel = $("#tenantSelect");
-    sel.innerHTML = "";
-    tenants.forEach(slug => {
-      const opt = document.createElement("option");
-      opt.value = slug; opt.textContent = slug;
-      if(slug === current) opt.selected = true;
-      sel.appendChild(opt);
-    });
   }
 
   function parseDate(s){
@@ -87,7 +74,10 @@
       project.installation_proof_date,
       project.interconnection_finish_date
     ];
-    const done = steps.filter(Boolean).length;
+    const done = steps.filter(d => {
+      const dt = parseDate(d);
+      return dt && dt <= new Date();
+    }).length;
     return Math.round((done/steps.length)*100);
   }
 
@@ -199,6 +189,9 @@
   function updateUrl(slug){
     const url = new URL(window.location.href);
     url.searchParams.set("tenant", slug);
+    if(!url.pathname.includes(`/${slug}`)){
+      url.pathname = `/${slug}/`;
+    }
     history.replaceState(null, "", url.toString());
   }
 
@@ -214,29 +207,22 @@
     initMap();
     let manifest;
     try{
-      manifest = await loadJSON("data/manifest.json");
+      manifest = await loadJSON("/data/manifest.json");
     }catch(e){
-      alert("No se pudo cargar el manifest. Verifica data/manifest.json");
+      alert("No se pudo cargar el manifest. Verifica /data/manifest.json");
       console.error(e);
       return;
     }
-    const qTenant = getParam("tenant");
     const defaultTenant = manifest?.defaultTenant || (manifest?.tenants?.[0]) || "";
-    const slug = qTenant && manifest.tenants.includes(qTenant) ? qTenant : defaultTenant;
-    setSelectOptions(manifest.tenants||[], slug);
-
-    $("#tenantSelect").addEventListener("change", (ev)=>{
-      const sel = ev.target.value;
-      if(!sel) return;
-      loadTenant(sel).catch(err=> alert("Error cargando datos del inversionista: " + err.message));
-    });
+    const pathSlug = window.location.pathname.split('/').filter(Boolean)[0];
+    const slug = manifest.tenants.includes(pathSlug) ? pathSlug : defaultTenant;
 
     await loadTenant(slug);
   }
 
   async function loadTenant(slug){
     updateUrl(slug);
-    const path = `data/tenants/${slug}.json`;
+    const path = `/data/tenants/${slug}.json`;
     let tenant;
     try{
       tenant = await loadJSON(path);
