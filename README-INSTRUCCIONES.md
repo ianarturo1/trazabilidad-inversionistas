@@ -22,4 +22,4 @@ Este paquete es un **sitio estático** listo para publicarse en Netlify y admini
 
 ## Notas
 
-Netlify redirige cualquier ruta a `index.html`, lo que permite la navegación como una aplicación de una sola página.
+El archivo `netlify.toml` redirige cualquier ruta a `index.html`, lo que permite la navegación como una aplicación de una sola página.
