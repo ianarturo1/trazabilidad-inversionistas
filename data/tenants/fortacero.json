@@ -56,6 +56,22 @@
       },
       "installation_duration_days": 20,
       "ppa_secured_date": "2025-08-12"
+    },
+    {
+      "size_kwp": 3.2,
+      "name": "SAMPIN",
+      "installation_proof_date": "2025-10-15",
+      "installation_start_date": "2025-09-30",
+      "location": "SALUD MENTAL PARA INDIGENTES, A.C",
+      "interconnection_finish_date": "2025-10-15",
+      "site_secured_date": "2025-07-30",
+      "id": "SOC-MX-NL-01",
+      "coordinates": {
+        "lng": -99.67009888400563,
+        "lat": 25.277452906473105
+      },
+      "installation_duration_days": 10,
+      "ppa_secured_date": "2025-09-01"
     }
   ]
 }
