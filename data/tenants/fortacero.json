@@ -41,21 +41,36 @@
   ],
   "sociality": [
     {
-      "notes": "Proyecto Sociality (3%).",
-      "size_kwp": 120,
-      "name": "Escuela Técnica Apodaca",
-      "installation_proof_date": null,
-      "installation_start_date": "2025-08-28",
-      "location": "Apodaca, Nuevo León, MX",
-      "interconnection_finish_date": null,
-      "site_secured_date": "2025-08-05",
+      "size_kwp": 3.2,
+      "name": "SALUD MENTAL PARA INDIGENTES, A.C",
+      "installation_proof_date": "2025-10-15",
+      "installation_start_date": "2025-09-30",
+      "location": "Bicentenario, Nuevo Leon",
+      "interconnection_finish_date": "2025-10-15",
+      "site_secured_date": "2025-07-30",
       "id": "SOC-MX-NL-01",
       "coordinates": {
-        "lat": 25.7802,
-        "lng": -100.1842
+        "lng": -100.30827402085238,
+        "lat": 25.680696184185063
       },
-      "installation_duration_days": 20,
-      "ppa_secured_date": "2025-08-12"
+      "installation_duration_days": 10,
+      "ppa_secured_date": "2025-09-01"
+    },
+    {
+      "size_kwp": 12.84,
+      "name": "Misión Los Ángeles",
+      "installation_proof_date": "2025-11-15",
+      "installation_start_date": "2025-10-30",
+      "location": "Bicentenario, Nuevo Leon",
+      "interconnection_finish_date": "2025-11-15",
+      "site_secured_date": "2025-07-30",
+      "id": "SOC-MX-NL-02",
+      "coordinates": {
+        "lng": -99.67007666605667,
+        "lat": 25.27740252118878
+      },
+      "installation_duration_days": 10,
+      "ppa_secured_date": "2025-08-01"
     }
   ]
 }
