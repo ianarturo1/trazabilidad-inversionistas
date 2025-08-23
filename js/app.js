@@ -187,7 +187,8 @@
 
   function updateUrl(slug){
     const url = new URL(window.location.href);
-    url.searchParams.set("tenant", slug);
+    // Forzar ruta con el slug y evitar exponer query params de otros tenants
+    url.searchParams.delete("tenant");
     if(!url.pathname.includes(`/${slug}`)){
       url.pathname = `/${slug}/`;
     }
@@ -212,9 +213,12 @@
       console.error(e);
       return;
     }
-    const defaultTenant = manifest?.defaultTenant || (manifest?.tenants?.[0]) || "";
+    const slug = manifest?.defaultTenant || "";
     const pathSlug = window.location.pathname.split('/').filter(Boolean)[0];
-    const slug = manifest.tenants.includes(pathSlug) ? pathSlug : defaultTenant;
+    // Redirigir a la vista exclusiva del tenant definido en el manifest
+    if(pathSlug !== slug){
+      updateUrl(slug);
+    }
 
     await loadTenant(slug);
   }
