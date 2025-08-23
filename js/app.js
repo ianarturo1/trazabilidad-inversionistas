@@ -131,7 +131,11 @@
   }
 
   function statusBadge(date){
-    if(date) return `<span class="badge ok">✔ ${formatDate(date)}</span>`;
+    if(date){
+      const d = parseDate(date);
+      const cls = (d && d > new Date()) ? "warn" : "ok";
+      return `<span class="badge ${cls}">✔ ${formatDate(date)}</span>`;
+    }
     return `<span class="badge pending">Pendiente</span>`;
   }
 
