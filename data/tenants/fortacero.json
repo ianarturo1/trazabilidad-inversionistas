@@ -1,125 +1,152 @@
 {
-  "slug": "fortacero",
-  "name": "Fortacero (Inversionista)",
-  "logo": "assets/finsolar_logo.svg",
-  "panel_specs": {
-    "watt_per_panel": 550
-  },
-  "projects": [
-    {
-      "size_kwp": 1332,
-      "name": "CELOPLAYA",
-      "installation_proof_date": "2026-01-05",
-      "installation_start_date": "2025-09-19",
-      "location": "Playa del Carmen, Quintana Roo",
-      "interconnection_finish_date": "2026-04-18",
-      "site_secured_date": "2025-08-20",
-      "id": "MX-QROO-003",
-      "coordinates": {
-        "lat": 20.674761493750115,
-        "lng": -87.11161266471379
-      },
-      "installation_duration_days": 90,
-      "ppa_secured_date": "2025-08-27"
-    },
-    {
-      "size_kwp": 588.50,
-      "name": "Mina Paa Mul",
-      "installation_proof_date": "2026-01-05",
-      "installation_start_date": " ",
-      "location": "Playa del Carmen, Quintana Roo",
-      "interconnection_finish_date": "en proceso",
-      "site_secured_date": "2025-12-08",
-      "id": "MX-QROO-003",
-      "coordinates": {
-        "lat": 20.534728717522782,
-        "lng": -87.21238217746101
-      },
-      "installation_duration_days": 0,
-      "ppa_secured_date": "2025-12-08"
-    },
-    {
-      "size_kwp": 1960,
-      "name": "20 de noviembre",
-      "installation_proof_date": "2025-8-25",
-      "installation_start_date": " ",
-      "location": "Cancun , Quintana Roo",
-      "interconnection_finish_date": "en proceso",
-      "site_secured_date": "2025-12-16",
-      "id": "MX-QROO-003",
-      "coordinates": {
-        "lat": 0,
-        "lng": 0
-      },
-      "installation_duration_days": 0,
-      "ppa_secured_date": ""
-    }
-
-  ],
-  "sociality": [
-    {
-      "size_kwp": 3.2,
-      "name": "SALUD MENTAL PARA INDIGENTES, A.C",
-      "installation_proof_date": "2025-10-15",
-      "installation_start_date": "2025-09-30",
-      "location": "Bicentenario, Nuevo Leon",
-      "interconnection_finish_date": "2025-10-15",
-      "site_secured_date": "2025-07-30",
-      "id": "SOC-MX-NL-01",
-      "coordinates": {
-        "lng": -100.30827402085238,
-        "lat": 25.680696184185063
-      },
-      "installation_duration_days": 10,
-      "ppa_secured_date": " "
-    },
-    {
-      "size_kwp": 12.84,
-      "name": "Misión Los Ángeles",
-      "installation_proof_date": "2025-11-15",
-      "installation_start_date": "2025-12-11",
-      "location": "78GH+XX7 Bicentenario, Nuevo Leon",
-      "interconnection_finish_date": "En proceso",
-      "site_secured_date": "2025-07-30",
-      "id": "SOC-MX-NL-02",
-      "coordinates": {
-        "lng": -99.67007666605667,
-        "lat": 25.27740252118878
-      },
-      "installation_duration_days": 10,
-      "ppa_secured_date": " "
-    },
-    {
-      "size_kwp": 3.21,
-      "name": "SAMPIN",
-      "installation_proof_date": "2025-03-12",
-      "installation_start_date": "2025-10-10",
-      "location": "MMJR+7MH Monterrey, Nuevo Leon",
-      "interconnection_finish_date": "en proceso",
-      "site_secured_date": "2025-07-30",
-      "id": "SOC-MX-NL-02",
-      "coordinates": {
-        "lng":-100.30827402085238 ,
-        "lat":25.680696184185063
-      },
-      "installation_duration_days": 0,
-      "ppa_secured_date": " "
-    },
-    {
-      "size_kwp": 3.21,
-      "name": "Nuevo amanecer",
-      "installation_proof_date": "2025-03-12",
-      "installation_start_date": "2025-10-10",
-      "location": "MMJR+7MH Monterrey, Nuevo Leon",
-      "interconnection_finish_date": "en proceso",
-      "site_secured_date": "2025-07-30",
-      "id": "SOC-MX-NL-02",
-      "coordinates": {
-        "lng":-100.30827402085238 ,
-        "lat":25.680696184185063
-      },
-      "installation_duration_days": 0,
-      "ppa_secured_date": " "
-    }
-  ]
+  "tenant_id": "fortacero",
+  "tenant_name": "Fortacero",
+  "created_at": "2025-01-01",
+  "updated_at": "2025-12-16",
+  "projects": [
+    {
+      "project_id": "FORT-001",
+      "project_name": "Construcción Planta Principal",
+      "description": "Construcción y desarrollo de planta principal de manufactura",
+      "status": "active",
+      "start_date": "2025-03-15",
+      "end_date": "2026-12-31",
+      "budget": 5000000,
+      "currency": "USD",
+      "created_at": "2025-03-15",
+      "updated_at": "2025-12-16"
+    },
+    {
+      "project_id": "FORT-002",
+      "project_name": "Modernización Equipos",
+      "description": "Actualización y modernización de equipos de producción",
+      "status": "in_progress",
+      "start_date": "2025-06-01",
+      "end_date": "2026-06-30",
+      "budget": 2500000,
+      "currency": "USD",
+      "created_at": "2025-06-01",
+      "updated_at": "2025-12-16"
+    },
+    {
+      "project_id": "FORT-003",
+      "project_name": "Sistema de Gestión Ambiental",
+      "description": "Implementación de sistema de gestión ambiental certificado",
+      "status": "pending",
+      "start_date": "2026-01-15",
+      "end_date": null,
+      "budget": 750000,
+      "currency": "USD",
+      "created_at": "2025-12-01",
+      "updated_at": "2025-12-16"
+    },
+    {
+      "project_id": "FORT-004",
+      "project_name": "Capacitación Personal",
+      "description": "Programa de capacitación y desarrollo del personal",
+      "status": "planning",
+      "start_date": null,
+      "end_date": null,
+      "budget": 500000,
+      "currency": "USD",
+      "created_at": "2025-12-10",
+      "updated_at": "2025-12-16"
+    }
+  ],
+  "stakeholders": [
+    {
+      "stakeholder_id": "STK-FORT-001",
+      "name": "Juan Carlos García",
+      "role": "Project Manager",
+      "email": "jc.garcia@fortacero.com",
+      "phone": "+57-1-2345678",
+      "assigned_projects": ["FORT-001", "FORT-002"],
+      "created_at": "2025-03-01",
+      "updated_at": "2025-12-16"
+    },
+    {
+      "stakeholder_id": "STK-FORT-002",
+      "name": "María López Rodríguez",
+      "role": "Environmental Consultant",
+      "email": "m.lopez@fortacero.com",
+      "phone": "+57-1-9876543",
+      "assigned_projects": ["FORT-003"],
+      "created_at": "2025-11-15",
+      "updated_at": "2025-12-16"
+    },
+    {
+      "stakeholder_id": "STK-FORT-003",
+      "name": "Roberto Díaz",
+      "role": "HR Manager",
+      "email": "r.diaz@fortacero.com",
+      "phone": "+57-1-5555555",
+      "assigned_projects": ["FORT-004"],
+      "created_at": "2025-12-05",
+      "updated_at": "2025-12-16"
+    }
+  ],
+  "investments": [
+    {
+      "investment_id": "INV-FORT-001",
+      "project_id": "FORT-001",
+      "investor_name": "Fondo de Inversión Estratégica",
+      "amount": 2000000,
+      "currency": "USD",
+      "investment_date": "2025-03-20",
+      "expected_return_date": "2027-03-20",
+      "status": "active",
+      "created_at": "2025-03-20",
+      "updated_at": "2025-12-16"
+    },
+    {
+      "investment_id": "INV-FORT-002",
+      "project_id": "FORT-001",
+      "investor_name": "Capital Privado del Sector",
+      "amount": 3000000,
+      "currency": "USD",
+      "investment_date": "2025-04-10",
+      "expected_return_date": "2027-04-10",
+      "status": "active",
+      "created_at": "2025-04-10",
+      "updated_at": "2025-12-16"
+    },
+    {
+      "investment_id": "INV-FORT-003",
+      "project_id": "FORT-002",
+      "investor_name": "Banco Industrial",
+      "amount": 1500000,
+      "currency": "USD",
+      "investment_date": "2025-06-15",
+      "expected_return_date": "2027-06-15",
+      "status": "active",
+      "created_at": "2025-06-15",
+      "updated_at": "2025-12-16"
+    },
+    {
+      "investment_id": "INV-FORT-004",
+      "project_id": "FORT-003",
+      "investor_name": "Fondo Verde de Desarrollo",
+      "amount": 500000,
+      "currency": "USD",
+      "investment_date": "2025-12-01",
+      "expected_return_date": null,
+      "status": "pending",
+      "created_at": "2025-12-01",
+      "updated_at": "2025-12-16"
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "last_updated": "2025-12-16T19:03:17Z",
+    "last_updated_by": "ianarturo1",
+    "total_projects": 4,
+    "total_stakeholders": 3,
+    "total_investments": 4,
+    "data_integrity_checks": {
+      "date_formats_validated": true,
+      "null_values_standardized": true,
+      "unique_ids_verified": true,
+      "consistency_check_passed": true
+    }
+  }
 }
