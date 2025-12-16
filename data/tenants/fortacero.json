@@ -32,12 +32,29 @@
       "site_secured_date": "2025-10-29",
       "id": "MX-QROO-004",
       "coordinates": {
-        "lng": -87.22478620514437,
-        "lat": 20.510786324685373
+        "lat": 20.534728717522782,
+        "lng": -87.21238217746101
       },
-      "installation_duration_days": 34,
-      "ppa_secured_date": "2025-11-05"
+      "installation_duration_days": 0,
+      "ppa_secured_date": "2025-12-08"
+    },
+    {
+      "size_kwp": 1,960,
+      "name": "20 de noviembre",
+      "installation_proof_date": "2025-8-25",
+      "installation_start_date": " ",
+      "location": "Cancun , Quintana Roo",
+      "interconnection_finish_date": "en proceso",
+      "site_secured_date": "2025-12-16",
+      "id": "MX-QROO-003",
+      "coordinates": {
+        "lat": 1332,
+        "lng": 77519
+      },
+      "installation_duration_days": 0,
+      "ppa_secured_date": ""
     }
+
   ],
   "sociality": [
     {
@@ -54,15 +71,15 @@
         "lat": 25.680696184185063
       },
       "installation_duration_days": 10,
-      "ppa_secured_date": "2025-09-01"
+      "ppa_secured_date": " "
     },
     {
       "size_kwp": 12.84,
       "name": "Misión Los Ángeles",
       "installation_proof_date": "2025-11-15",
-      "installation_start_date": "2025-10-30",
-      "location": "Bicentenario, Nuevo Leon",
-      "interconnection_finish_date": "2025-11-15",
+      "installation_start_date": "2025-12-11",
+      "location": "78GH+XX7 Bicentenario, Nuevo Leon",
+      "interconnection_finish_date": "En proceso",
       "site_secured_date": "2025-07-30",
       "id": "SOC-MX-NL-02",
       "coordinates": {
@@ -70,7 +87,39 @@
         "lat": 25.27740252118878
       },
       "installation_duration_days": 10,
-      "ppa_secured_date": "2025-08-01"
+      "ppa_secured_date": " "
+    },
+    {
+      "size_kwp": 3.21,
+      "name": "SAMPIN",
+      "installation_proof_date": "2025-03-12",
+      "installation_start_date": "2025-10-10",
+      "location": "MMJR+7MH Monterrey, Nuevo Leon",
+      "interconnection_finish_date": "en proceso",
+      "site_secured_date": "2025-07-30",
+      "id": "SOC-MX-NL-02",
+      "coordinates": {
+        "lng":-100.30827402085238 ,
+        "lat":25.680696184185063
+      },
+      "installation_duration_days": 0,
+      "ppa_secured_date": " "
+    },
+    {
+      "size_kwp": 3.21,
+      "name": "Nuevo amanecer",
+      "installation_proof_date": "2025-03-12",
+      "installation_start_date": "2025-10-10",
+      "location": "MMJR+7MH Monterrey, Nuevo Leon",
+      "interconnection_finish_date": "en proceso",
+      "site_secured_date": "2025-07-30",
+      "id": "SOC-MX-NL-02",
+      "coordinates": {
+        "lng":-100.30827402085238 ,
+        "lat":25.680696184185063
+      },
+      "installation_duration_days": 0,
+      "ppa_secured_date": " "
     }
   ]
 }
