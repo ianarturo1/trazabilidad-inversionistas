@@ -50,6 +50,25 @@
   }
 
   function renderKPIs(tenant){
+    // Detect generic project schema
+    const projects = tenant.projects || [];
+    const isGeneric = projects.length > 0 && (projects[0].project_name || projects[0].budget);
+
+    if(isGeneric){
+      const totalBudget = projects.reduce((acc, p) => acc + (Number(p.budget)||0), 0);
+      const totalProjects = projects.length;
+      const activeProjects = projects.filter(p => p.status === 'active' || p.status === 'in_progress').length;
+      const currency = projects[0]?.currency || "USD";
+
+      $("#kpis").innerHTML = `
+        <div class="kpi"><h4>Presupuesto Total</h4><p>$${fmt.format(totalBudget)}</p></div>
+        <div class="kpi"><h4>Proyectos totales</h4><p>${fmt.format(totalProjects)}</p></div>
+        <div class="kpi"><h4>Activos</h4><p>${fmt.format(activeProjects)}</p></div>
+        <div class="kpi"><h4>Moneda</h4><p>${currency}</p></div>
+      `;
+      return;
+    }
+
     const totalCap = sumCapacity(tenant.projects) + sumCapacity(tenant.sociality);
     const totalProjects = (tenant.projects?.length||0) + (tenant.sociality?.length||0);
     const wpp = tenant.panel_specs?.watt_per_panel || 550;
@@ -137,6 +156,35 @@
   }
 
   function renderCard(p, wpp){
+    // Schema B: Generic Project
+    if(p.project_name || p.budget) {
+       const name = p.project_name || "Sin nombre";
+       const desc = p.description || "";
+       const budget = p.budget ? fmt.format(p.budget) + " " + (p.currency||"USD") : "—";
+
+       return `
+      <article class="card">
+        <h4>${name}</h4>
+        <div class="meta">${desc}</div>
+        <div class="meta" style="margin-top:4px;"><strong>Presupuesto:</strong> $${budget}</div>
+        <div class="timeline">
+          <div class="step">
+            <div class="title">Inicio</div>
+            <div class="date">${statusBadge(p.start_date)}</div>
+          </div>
+          <div class="step">
+            <div class="title">Estatus</div>
+            <div class="date"><span class="badge ${p.status==='active'?'ok':(p.status==='pending'?'pending':'warn')}">${p.status}</span></div>
+          </div>
+           <div class="step">
+            <div class="title">Fin estimado</div>
+            <div class="date">${statusBadge(p.end_date)}</div>
+          </div>
+        </div>
+      </article>
+       `;
+    }
+
     const eta = daysAdd(p.installation_start_date, p.installation_duration_days);
     return `
       <article class="card">
