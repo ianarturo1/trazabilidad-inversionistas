@@ -1,4 +1,4 @@
-{
+ {
   "slug": "fortacero",
   "name": "Fortacero (Inversionista)",
   "logo": "assets/finsolar_logo.svg",
@@ -28,7 +28,7 @@
       "installation_proof_date": "2026-01-05",
       "installation_start_date": " ",
       "location": "Playa del Carmen, Quintana Roo",
-      "interconnection_finish_date": "en proceso",
+      "interconnection_finish_date": "25/12/10",
       "site_secured_date": "2025-12-08",
       "id": "MX-QROO-003",
       "coordinates": {
@@ -39,17 +39,17 @@
       "ppa_secured_date": "2025-12-08"
     },
     {
-      "size_kwp": 1960,
+      "size_kwp": 1,960,
       "name": "20 de noviembre",
       "installation_proof_date": "2025-8-25",
       "installation_start_date": " ",
       "location": "Cancun , Quintana Roo",
-      "interconnection_finish_date": "en proceso",
+      "interconnection_finish_date": "25/12/10",
       "site_secured_date": "2025-12-16",
       "id": "MX-QROO-003",
       "coordinates": {
-        "lat": 0,  
-        "lng": 0   
+        "lat": 1332,
+        "lng": 77519
       },
       "installation_duration_days": 0,
       "ppa_secured_date": ""
@@ -79,7 +79,7 @@
       "installation_proof_date": "2025-11-15",
       "installation_start_date": "2025-12-11",
       "location": "78GH+XX7 Bicentenario, Nuevo Leon",
-      "interconnection_finish_date": "En proceso",
+      "interconnection_finish_date": "25/12/10",
       "site_secured_date": "2025-07-30",
       "id": "SOC-MX-NL-02",
       "coordinates": {
@@ -95,7 +95,7 @@
       "installation_proof_date": "2025-03-12",
       "installation_start_date": "2025-10-10",
       "location": "MMJR+7MH Monterrey, Nuevo Leon",
-      "interconnection_finish_date": "en proceso",
+      "interconnection_finish_date": "25/12/10",
       "site_secured_date": "2025-07-30",
       "id": "SOC-MX-NL-02",
       "coordinates": {
@@ -111,7 +111,7 @@
       "installation_proof_date": "2025-03-12",
       "installation_start_date": "2025-10-10",
       "location": "MMJR+7MH Monterrey, Nuevo Leon",
-      "interconnection_finish_date": "en proceso",
+      "interconnection_finish_date": "25/12/10",
       "site_secured_date": "2025-07-30",
       "id": "SOC-MX-NL-02",
       "coordinates": {
