@@ -1,0 +1,62 @@
+{
+  "projects": [
+    {
+      "id": "MX-QROO-003",
+      "name": "Proyecto Forestal Quintana Roo 3",
+      "location": "Quintana Roo, Mexico",
+      "startDate": "2023-01-15",
+      "endDate": "2025-12-31",
+      "status": "active",
+      "investors": [
+        {
+          "id": "SOC-MX-NL-01",
+          "name": "Sociedad de Inversión Nuevo León 1",
+          "investmentAmount": 150000.00,
+          "investmentDate": "2023-01-15",
+          "percentage": 25.5
+        }
+      ]
+    },
+    {
+      "id": "MX-QROO-004",
+      "name": "Proyecto Forestal Quintana Roo 4",
+      "location": "Quintana Roo, Mexico",
+      "startDate": "2023-06-01",
+      "endDate": null,
+      "status": "planning",
+      "investors": [
+        {
+          "id": "SOC-MX-NL-02",
+          "name": "Sociedad de Inversión Nuevo León 2",
+          "investmentAmount": 200000.00,
+          "investmentDate": "2023-06-01",
+          "percentage": 35.0
+        },
+        {
+          "id": "SOC-MX-NL-03",
+          "name": "Sociedad de Inversión Nuevo León 3",
+          "investmentAmount": 180000.00,
+          "investmentDate": "2023-07-10",
+          "percentage": 30.5
+        }
+      ]
+    },
+    {
+      "id": "MX-QROO-005",
+      "name": "Proyecto Forestal Quintana Roo 5",
+      "location": "Quintana Roo, Mexico",
+      "startDate": "2024-03-20",
+      "endDate": null,
+      "status": "development",
+      "investors": [
+        {
+          "id": "SOC-MX-NL-04",
+          "name": "Sociedad de Inversión Nuevo León 4",
+          "investmentAmount": 250000.00,
+          "investmentDate": "2024-03-20",
+          "percentage": 100.0
+        }
+      ]
+    }
+  ]
+}
