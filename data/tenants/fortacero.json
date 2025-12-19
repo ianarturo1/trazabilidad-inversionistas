@@ -7,23 +7,6 @@
   },
   "projects": [
     {
-      "id": "MX-QROO-CELO-01",
-      "name": "CELOPLAYA",
-      "location": "Playa del Carmen, Quintana Roo",
-      "coordinates": {
-        "lat": 20.674761493750115,
-        "lng": -87.11161266471379
-      },
-      "size_kwp": 1332,
-      "site_secured_date": "2025-08-20",
-      "ppa_secured_date": "2025-08-27",
-      "installation_start_date": "2025-09-19",
-      "installation_duration_days": 90,
-      "installation_proof_date": "2026-01-05",
-      "interconnection_finish_date": "2026-04-18",
-      "notes": ""
-    },
-    {
       "id": "MX-QROO-MINA-01",
       "name": "Mina Paa Mul",
       "location": "Playa del Carmen, Quintana Roo",
