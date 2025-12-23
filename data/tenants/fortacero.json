@@ -15,7 +15,7 @@
         "lng": -87.21238217746101
       },
       "size_kwp": 588.5,
-      "site_secured_date": "",
+      "site_secured_date": "2025-12-23",
       "ppa_secured_date": "",
       "installation_start_date": "",
       "installation_duration_days": 0,
@@ -39,21 +39,21 @@
   ],
   "sociality": [
     {
-      "id": "SOC-MX-NL-01",
-      "name": "SALUD MENTAL PARA INDIGENTES, A.C",
-      "location": "Bicentenario, Nuevo León",
+      "id": "SOC-MX-NL-03",
+      "name": "SAMPIN",
+      "location": "Monterrey, Nuevo León",
       "coordinates": {
         "lat": 25.680696184185063,
         "lng": -100.30827402085238
       },
-      "size_kwp": 3.2,
-      "site_secured_date": "",
-      "ppa_secured_date": "",
-      "installation_start_date": "",
-      "installation_duration_days": 10,
-      "installation_proof_date": "",
-      "interconnection_finish_date": "",
-      "notes": ""
+      "size_kwp": 3.21,
+      "site_secured_date": "N/A",
+      "ppa_secured_date": "N/A",
+      "installation_start_date": "2025-10-10",
+      "installation_duration_days": 0,
+      "installation_proof_date": "2025-12-18",
+      "interconnection_finish_date": "2025-10-11",
+      "notes": "Fin de instalación: 11/12/2025. Fe de hechos programada una semana después."
     },
     {
       "id": "SOC-MX-NL-02",
@@ -64,30 +64,13 @@
         "lng": -99.67007666605667
       },
       "size_kwp": 12.84,
-      "site_secured_date": "",
-      "ppa_secured_date": "",
-      "installation_start_date": "2025-12-11",
+      "site_secured_date": "N/A",
+      "ppa_secured_date": "N/A",
+      "installation_start_date": "2025-12-09",
       "installation_duration_days": 10,
-      "installation_proof_date": "",
-      "interconnection_finish_date": "",
-      "notes": "Interconexión en proceso (fechas por confirmar)."
-    },
-    {
-      "id": "SOC-MX-NL-03",
-      "name": "SAMPIN",
-      "location": "Monterrey, Nuevo León",
-      "coordinates": {
-        "lat": 25.680696184185063,
-        "lng": -100.30827402085238
-      },
-      "size_kwp": 3.21,
-      "site_secured_date": "",
-      "ppa_secured_date": "",
-      "installation_start_date": "2025-10-10",
-      "installation_duration_days": 0,
-      "installation_proof_date": "",
-      "interconnection_finish_date": "",
-      "notes": "Fechas de fe de hechos e interconexión pendientes."
+      "installation_proof_date": "2025-12-18",
+      "interconnection_finish_date": "Q1",
+      "notes": "ETA fin de instalación 11/12/2025. Fe de hechos una semana después."
     },
     {
       "id": "SOC-MX-NL-04",
@@ -98,8 +81,8 @@
         "lng": -100.30827402085238
       },
       "size_kwp": 3.21,
-      "site_secured_date": "",
-      "ppa_secured_date": "",
+      "site_secured_date": "N/A",
+      "ppa_secured_date": "N/A",
       "installation_start_date": "",
       "installation_duration_days": 0,
       "installation_proof_date": "",
