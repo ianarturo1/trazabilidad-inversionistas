@@ -49,10 +49,10 @@
       "size_kwp": 3.21,
       "site_secured_date": "N/A",
       "ppa_secured_date": "N/A",
-      "installation_start_date": "2025-10-09",
+      "installation_start_date": "2025-10-10",
       "installation_duration_days": 0,
-      "installation_proof_date": "2025-12-17",
-      "interconnection_finish_date": "2025-10-10",
+      "installation_proof_date": "2025-12-18",
+      "interconnection_finish_date": "2025-10-11",
       "notes": "Fin de instalación: 11/12/2025. Fe de hechos programada una semana después."
     },
     {
@@ -67,10 +67,10 @@
       "site_secured_date": "N/A",
       "ppa_secured_date": "N/A",
       "installation_start_date": "2025-12-08",
-      "installation_duration_days": 10,
+      "installation_duration_days": 3,
       "installation_proof_date": "2025-12-18",
       "interconnection_finish_date": "",
-      "notes": ""
+      "notes": "ETA fin de instalación: 11/12/2025. Fe de hechos una semana después."
     },
     {
       "id": "SOC-MX-NL-04",
