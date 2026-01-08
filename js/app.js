@@ -50,6 +50,24 @@
   }
 
   function renderKPIs(tenant){
+    const projects = tenant.projects || [];
+    // Detectamos si es esquema de Construcción (generic) vs Solar (kWp)
+    const isConstruction = projects.some(p => p.budget !== undefined);
+
+    if (isConstruction) {
+      const totalBudget = projects.reduce((acc, p) => acc + (p.budget || 0), 0);
+      const totalProjects = projects.length;
+      const activeProjects = projects.filter(p => p.status === 'active' || p.status === 'in_progress').length;
+
+      $("#kpis").innerHTML = `
+        <div class="kpi"><h4>Presupuesto Total</h4><p>$${fmt.format(totalBudget)}</p></div>
+        <div class="kpi"><h4>Proyectos Totales</h4><p>${fmt.format(totalProjects)}</p></div>
+        <div class="kpi"><h4>Proyectos Activos</h4><p>${fmt.format(activeProjects)}</p></div>
+      `;
+      return;
+    }
+
+    // Lógica Solar Original
     const totalCap = sumCapacity(tenant.projects) + sumCapacity(tenant.sociality);
     const totalProjects = (tenant.projects?.length||0) + (tenant.sociality?.length||0);
     const wpp = tenant.panel_specs?.watt_per_panel || 550;
@@ -136,7 +154,41 @@
     return `<span class="badge pending">Pendiente</span>`;
   }
 
+  function translateStatus(s){
+    const map = {
+      'active': 'Activo',
+      'in_progress': 'En Progreso',
+      'pending': 'Pendiente',
+      'planning': 'Planeación'
+    };
+    return map[s] || s;
+  }
+
   function renderCard(p, wpp){
+    // Detectar esquema construcción
+    if(p.project_name || p.budget) {
+       return `
+      <article class="card">
+        <h4>${p.project_name||"—"}</h4>
+        <div class="meta">${p.description||""}</div>
+        <div class="meta">
+            ${p.budget ? `Presupuesto: ${fmt.format(p.budget)} ${p.currency||"USD"}` : ""}
+            ${p.status ? `· Estado: ${translateStatus(p.status)}` : ""}
+        </div>
+        <div class="timeline">
+          <div class="step">
+            <div class="title">Inicio</div>
+            <div class="date">${formatDate(p.start_date)}</div>
+          </div>
+          <div class="step">
+             <div class="title">Fin Estimado</div>
+             <div class="date">${formatDate(p.end_date)}</div>
+          </div>
+        </div>
+      </article>
+       `;
+    }
+
     const eta = daysAdd(p.installation_start_date, p.installation_duration_days);
     return `
       <article class="card">
